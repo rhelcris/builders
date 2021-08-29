@@ -1,0 +1,38 @@
+version: '3.4'
+services:
+  db:
+    image: mysql:latest
+    command: mysqld --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      TZ: America/Sao_Paulo
+      MYSQL_ROOT_PASSWORD: docker
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+      MYSQL_DATABASE: buildersdb
+    ports:
+      - "3308:3306"
+    networks:
+      - builders-network
+
+  clientes-api:
+    image: clientes-api
+    restart: always
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      TZ: America/Sao_Paulo
+    ports:
+      - "8080:8080"
+    command: mvn spring-boot:run
+    links:
+      - db
+    depends_on:
+      - db
+    networks:
+      - builders-network
+
+networks:
+  builders-network:
+    driver: bridge
