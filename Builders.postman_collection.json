@@ -1,0 +1,202 @@
+{
+	"id": "d61f6098-89f0-c29a-0bd5-371462bb0489",
+	"name": "Builders",
+	"description": "",
+	"order": [
+		"b2018d7f-0783-2b1c-36db-bf9c2a13b090",
+		"b079f758-478a-dfe4-2a18-f378131fee48",
+		"7e1a411f-b7bc-7364-8e5b-8b7a284431fa",
+		"f5e558b2-1e9d-7b2a-0bb2-0d2feb5992b3",
+		"f5289b3c-6433-522a-fa33-8c0ae68789ea"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1630194605852,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "7e1a411f-b7bc-7364-8e5b-8b7a284431fa",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/clientes",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "d61f6098-89f0-c29a-0bd5-371462bb0489",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Cadastrar Cliente",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1630194696285,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"nome_cliente\": \"Rhelcris Salvino de Sousa\",\n\t\"numero_documento\": \"77199642253\",\n\t\"data_nascimento\": \"1987-04-08\",\n\t\"endereco\": {\n\t\t\"logradouro\": \"Rua Estefania Louro\",\n\t\t\"numero\": \"74\",\n\t\t\"bairro\": \"Vila Dom Pedro II\",\n\t\t\"complemento\": \"Próximo ao bar do loirao\",\n\t\t\"cidade\": \"Sao Paulo\",\n\t\t\"uf\": \"SP\",\n\t\t\"cep\": \"02241-080\"\n\t}\n}"
+		},
+		{
+			"id": "b079f758-478a-dfe4-2a18-f378131fee48",
+			"headers": "//PAGE: 1\n//PAGE_SIZE: 3\n",
+			"headerData": [
+				{
+					"key": "PAGE",
+					"value": "1",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "PAGE_SIZE",
+					"value": "3",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "localhost:8080/clientes",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "d61f6098-89f0-c29a-0bd5-371462bb0489",
+			"data": null,
+			"dataMode": "params",
+			"name": "Listagem Comum",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1630194680705,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "b2018d7f-0783-2b1c-36db-bf9c2a13b090",
+			"headers": "//PAGE: 1\n//PAGE_SIZE: 3\n",
+			"headerData": [
+				{
+					"key": "PAGE",
+					"value": "1",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "PAGE_SIZE",
+					"value": "3",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "localhost:8080/clientes?PAGE=0&PAGE_SIZE=2&NOME_CLIENTE=salvi&NUMERO_DOCUMENTO=",
+			"queryParams": [
+				{
+					"key": "PAGE",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "PAGE_SIZE",
+					"value": "2",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "NOME_CLIENTE",
+					"value": "salvi",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "NUMERO_DOCUMENTO",
+					"value": "",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1630894959959,
+			"name": "Listagem Paginada",
+			"description": "",
+			"collectionId": "d61f6098-89f0-c29a-0bd5-371462bb0489",
+			"responses": []
+		},
+		{
+			"id": "f5289b3c-6433-522a-fa33-8c0ae68789ea",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/clientes/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1630895020870,
+			"name": "Atualizar Cliente",
+			"description": "",
+			"collectionId": "d61f6098-89f0-c29a-0bd5-371462bb0489",
+			"responses": [],
+			"rawModeData": "{\n\t\"nome_cliente\": \"Rhelcris Salvino Marreiro 2\",\n\t\"numero_documento\": \"7719964225333\",\n\t\"data_nascimento\": \"1987-04-07\",\n\t\"endereco\": {\n\t\t\"logradouro\": \"Rua Estefania Louro 222\",\n\t\t\"numero\": \"7422\",\n\t\t\"bairro\": \"Vila Dom Pedro II 22\",\n\t\t\"complemento\": \"Próximo ao bar do loirao 22\",\n\t\t\"cidade\": \"Sao Paulo 22\",\n\t\t\"uf\": \"SP\",\n\t\t\"cep\": \"02241-080\"\n\t}\n}"
+		},
+		{
+			"id": "f5e558b2-1e9d-7b2a-0bb2-0d2feb5992b3",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:8080/clientes/4",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "d61f6098-89f0-c29a-0bd5-371462bb0489",
+			"data": null,
+			"dataMode": "params",
+			"name": "Excluir Cliente",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1630194715281,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
