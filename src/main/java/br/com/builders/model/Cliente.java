@@ -9,6 +9,8 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.Period;
 
+import static java.util.Objects.nonNull;
+
 @Data
 @Builder
 @Entity
@@ -27,7 +29,11 @@ public class Cliente {
     private Endereco endereco;
 
     public int getIdade() {
-        return Period.between(dataNascimento, LocalDate.now()).getYears();
+        if(nonNull(dataNascimento)) {
+            return Period.between(dataNascimento, LocalDate.now()).getYears();
+        } else {
+            return 0;
+        }
     }
 
 }
